@@ -26,6 +26,7 @@ jobs:
 
     env:
       USER: ${{ github.repository_owner }}
+      REPO: ${{ github.event.repository.name }}
       REPO_NAME: ${{ secrets.REPO_MOVIES }}
       SRC_NAME: source
 
@@ -47,7 +48,10 @@ jobs:
           python-version: 3.x
 
       - name: Build Site
-        run: bash ${{ env.SRC_NAME }}/deploy.sh ${{ env.SRC_NAME }}
+        run: |
+          bash ${{ env.SRC_NAME }}/deploy.sh \
+            ${{ env.SRC_NAME }} \
+            "https://${{ env.USER }}.github.io/${{ env.REPO }}/"
 
       - name: Setup pages
         uses: actions/configure-pages@v5
