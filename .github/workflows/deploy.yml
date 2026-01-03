@@ -49,9 +49,10 @@ jobs:
 
       - name: Build Site
         run: |
-          bash ${{ env.SRC_NAME }}/deploy.sh \
-            ${{ env.SRC_NAME }} \
-            "https://${{ env.USER }}.github.io/${{ env.REPO }}/"
+          BASE=${{ env.SRC_NAME }}
+          SITE="https://${{ env.USER }}.github.io/${{ env.REPO }}/"
+          echo $BASE $SITE
+          bash $BASE/deploy.sh $BASE $SITE
 
       - name: Setup pages
         uses: actions/configure-pages@v5
