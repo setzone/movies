@@ -1,98 +1,16 @@
 # Site information
 site_name: "Cinéphile: Top Films For All"
-site_url: https://hantang.github.io/cinephile/
-site_author: hantang
+# site_url: 
+# site_author:
 site_description: "Top movie collections"
-copyright: Copyright &copy; 2023-2024 Hantang
-repo_name: cinephile
-repo_url: https://github.com/hantang/cinephile/
+# copyright:
+# repo_name: 
+# repo_url: 
 
 # Theme
 theme:
   name: material
   language: "zh"
-  icon:
-    logo: material/movie-open
-    repo: fontawesome/brands/square-github
-  font:
-    text: Open Sans, Helvetica Neue, Roboto, sans-serif, serif
-    code: Fira Mono, Fira Code, Roboto Mono, monospace
-  palette:
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/link
-        name: Switch to light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: teal
-      accent: teal
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch-off
-        name: Switch to system preference
-  features:
-    - navigation.footer
-    - navigation.path
-    - navigation.tabs
-    - navigation.top
-    - navigation.sections
-    - search.highlight
-    - search.suggest
-    - toc.follow
-    # - toc.integrate
-
-markdown_extensions:
-  - abbr
-  - admonition
-  - attr_list
-  - def_list
-  - footnotes
-  - md_in_html
-  - tables
-  - toc:
-      permalink: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
-  # Python Markdown Extensions
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/hantang
-
-plugins:
-  - search:
-      lang:
-        - en
-        - zh
-      separator: '[\s\-,:!=\[\]()"/\u200b]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
 
 # MORE-NAV
 nav:
